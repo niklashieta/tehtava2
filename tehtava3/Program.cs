@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tehtava2
+namespace tehtava3
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] number;
-           number = new int[5];
-            Console.WriteLine("Syota 5 kokonaislukua\n");
+            int sum = 0;
+            number = new int[5];
             for (int i = 0; i <= 4; i++)
             {
+                Console.Write("anna pisteet >");
                 number[i] = int.Parse(Console.ReadLine());
             }
-            for(int h=4;h>=0;h--)
+            for (int h=0; h<=4; h++)
             {
-                Console.Write(number[h]);
-                Console.Write("\n");
+                sum += number[h];
             }
+            Console.Write(sum - 10);
         }
     }
 }
